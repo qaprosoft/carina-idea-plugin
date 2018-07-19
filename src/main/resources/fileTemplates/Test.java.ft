@@ -1,0 +1,23 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+#parse("File Header.java")
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.qaprosoft.carina.core.foundation.AbstractTest;
+import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
+
+public class ${NAME} extends AbstractTest {
+
+    @BeforeMethod
+    public void executeBefore${NAME}Method() {
+
+    }
+
+    @Test(description = "JIRA#")
+    @MethodOwner(owner = "${USER}")
+    public void test() {
+        Assert.assertNotNull(getDriver(), "Web Driver is null.");
+    }
+}

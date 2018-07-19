@@ -1,0 +1,9 @@
+#if($field.modifierStatic)
+static ##
+#end
+void ##
+#set($name = $StringUtil.capitalizeWithJavaBeanConvention($StringUtil.sanitizeJavaIdentifier($helper.getPropertyName($field, $project))))
+click##
+${name}() {
+get${name}().click();
+}

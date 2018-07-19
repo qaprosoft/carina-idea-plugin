@@ -1,0 +1,56 @@
+<templateSet group="Carina extended web elements">
+    <template name="ewe" value="@FindBy($BY$ = &quot;$END$&quot;)&#10;private ExtendedWebElement $NAME$;" description="New extended web element with default FindBy." toReformat="false" toShortenFQNames="false">
+        <variable name="BY" expression="" defaultValue="&quot;xpath&quot;" alwaysStopAt="false" />
+        <variable name="NAME" expression="" defaultValue="&quot;extendedWebElement&quot;" alwaysStopAt="true" />
+        <variable name="END" expression="complete()" defaultValue="&quot;.//&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="false" />
+            <option name="ABSTRACT_PAGE" value="true" />
+        </context>
+    </template>
+    <template name="ewec" value="@FindBy($BY$ = &quot;$END$&quot;)&#10;private ExtendedWebElement $NAME$;" description="New extended web element with FindBy css." toReformat="false" toShortenFQNames="false">
+        <variable name="BY" expression="" defaultValue="&quot;css&quot;" alwaysStopAt="false" />
+        <variable name="NAME" expression="" defaultValue="&quot;extendedWebElement&quot;" alwaysStopAt="true" />
+        <variable name="END" expression="complete()" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="false" />
+            <option name="ABSTRACT_PAGE" value="true" />
+        </context>
+    </template>
+    <template name="ewei" value="@FindBy($BY$ = &quot;$END$&quot;)&#10;private ExtendedWebElement $NAME$;" description="New extended web element with FindBy id." toReformat="false" toShortenFQNames="false">
+        <variable name="BY" expression="" defaultValue="&quot;id&quot;" alwaysStopAt="false" />
+        <variable name="NAME" expression="" defaultValue="&quot;extendedWebElement&quot;" alwaysStopAt="true" />
+        <variable name="END" expression="complete()" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="false" />
+            <option name="ABSTRACT_PAGE" value="true" />
+        </context>
+    </template>
+    <template name="ewecn" value="@FindBy($BY$ = &quot;$END$&quot;)&#10;private ExtendedWebElement $NAME$;" description="New extended web element with FindBy className." toReformat="false" toShortenFQNames="false">
+        <variable name="BY" expression="" defaultValue="&quot;className&quot;" alwaysStopAt="false" />
+        <variable name="NAME" expression="" defaultValue="&quot;extendedWebElement&quot;" alwaysStopAt="true" />
+        <variable name="END" expression="complete()" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="false" />
+            <option name="ABSTRACT_PAGE" value="true" />
+        </context>
+    </template>
+    <template name="ewetn" value="@FindBy($BY$ = &quot;$END$&quot;)&#10;private ExtendedWebElement $NAME$;" description="New extended web element with FindBy tagName." toReformat="false" toShortenFQNames="false">
+        <variable name="BY" expression="" defaultValue="&quot;tagName&quot;" alwaysStopAt="false" />
+        <variable name="NAME" expression="" defaultValue="&quot;extendedWebElement&quot;" alwaysStopAt="true" />
+        <variable name="END" expression="complete()" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="false" />
+            <option name="ABSTRACT_PAGE" value="true" />
+        </context>
+    </template>
+    <template name="lewe" value="@FindBy($BY$ = &quot;$END$&quot;)&#10;private List&lt;ExtendedWebElement&gt; $NAME$;" description="New extended web elements list with default FindBy." toReformat="false" toShortenFQNames="false">
+        <variable name="BY" expression="" defaultValue="&quot;xpath&quot;" alwaysStopAt="false" />
+        <variable name="NAME" expression="" defaultValue="&quot;extendedWebElements&quot;" alwaysStopAt="true" />
+        <variable name="END" expression="complete()" defaultValue="&quot;.//&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="false" />
+            <option name="ABSTRACT_PAGE" value="true" />
+        </context>
+    </template>
+</templateSet>

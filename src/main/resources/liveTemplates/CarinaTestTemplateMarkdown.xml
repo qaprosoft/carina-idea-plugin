@@ -1,0 +1,21 @@
+<templateSet group="Carina tests">
+    <template name="ct" value="@Test(description = &quot;JIRA#$TICKET$&quot;)&#10;@MethodOwner(owner = &quot;$USER$&quot;)&#10;public void $TEST_NAME$() {&#10;&#10;}" description="New extended testng test." toReformat="false" toShortenFQNames="false">
+        <variable name="USER" expression="user()" alwaysStopAt="false" />
+        <variable name="TEST_NAME" expression="" defaultValue="&quot;test&quot;" alwaysStopAt="true" />
+        <variable name="TICKET" expression="complete()" defaultValue="" alwaysStopAt="false" />
+        <context>
+            <option name="JAVA_CODE" value="false" />
+            <option name="ABSTRACT_TEST" value="false" />
+        </context>
+    </template>
+    <template name="ctdp" value="@Test(description = &quot;JIRA#$TICKET$&quot;, dataProvider = &quot;$DATA_PROVIDER$&quot;)&#10;@MethodOwner(owner = &quot;$USER$&quot;)&#10;public void $TEST_NAME$() {&#10;&#10;}" description="New extended testng test with data provider." toReformat="false" toShortenFQNames="false">
+        <variable name="USER" expression="user()" alwaysStopAt="false" />
+        <variable name="TEST_NAME" expression="" defaultValue="&quot;test&quot;" alwaysStopAt="true" />
+        <variable name="TICKET" expression="" defaultValue="" alwaysStopAt="false" />
+        <variable name="DATA_PROVIDER" expression="complete()" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="false" />
+            <option name="ABSTRACT_TEST" value="true" />
+        </context>
+    </template>
+</templateSet>

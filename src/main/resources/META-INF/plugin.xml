@@ -1,0 +1,59 @@
+<idea-plugin>
+  <id>com.qaprosoft.carinanaplugin</id>
+  <name>Carina framework IDEA plugin</name>
+  <version>1.0</version>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">Qaprosoft</vendor>
+
+  <description>Plugin contains Carina framework support</description>
+
+  <change-notes></change-notes>
+
+  <idea-version since-build="173.0"/>
+
+  <depends>com.intellij.modules.lang</depends>
+
+  <application-components>
+    <component>
+      <interface-class>com.qaprosoft.carinaplugin.registration.PluginRegistration</interface-class>
+      <implementation-class>com.qaprosoft.carinaplugin.registration.PluginRegistration</implementation-class>
+    </component>
+    <component>
+      <interface-class>com.qaprosoft.carinaplugin.registration.MavenRegistration</interface-class>
+      <implementation-class>com.qaprosoft.carinaplugin.registration.MavenRegistration</implementation-class>
+    </component>
+  </application-components>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <defaultLiveTemplatesProvider implementation="com.qaprosoft.carinaplugin.liveTemplates.TemplateProvider"/>
+    <liveTemplateContext implementation="com.qaprosoft.carinaplugin.liveTemplates.contexttypes.WebElementContextType"/>
+    <liveTemplateContext implementation="com.qaprosoft.carinaplugin.liveTemplates.contexttypes.TestContextType"/>
+
+    <!--<intentionAction>
+      <className>com.qaprosoft.carinaplugin.intentions.WebElementFieldConverter</className>
+      <category>Web element</category>
+      <descriptionDirectoryName>WebElementFieldConverter</descriptionDirectoryName>
+    </intentionAction>-->
+    <createFromTemplateHandler implementation="com.qaprosoft.carinaplugin.handlers.CreateFromTemplateHandler"/>
+    <!--<inspectionToolProvider implementation="com.qaprosoft.carinaplugin.inspections.InspectionProvider"/>-->
+  </extensions>
+
+  <actions>
+    <action id="editor.elustrator.newPageObjectFile" class="com.qaprosoft.carinaplugin.actions.CreateTemplateInPackageAction">
+      <add-to-group group-id="NewGroup" relative-to-action="NewFile" anchor="before"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift alt N"/>
+    </action>
+    <action id="GenerateGetterClickerMethods" text="Getter and Clicker" class="com.qaprosoft.carinaplugin.actions.codeInsight.ClickingAction">
+      <add-to-group group-id="JavaGenerateGroup1" relative-to-action="GenerateGetterAndSetter" anchor="after" />
+    </action>
+    <action id="GenerateGetterTyperMethods" text="Getter and Typer" class="com.qaprosoft.carinaplugin.actions.codeInsight.TypingAction">
+      <add-to-group group-id="JavaGenerateGroup1" relative-to-action="GenerateGetterAndSetter" anchor="after" />
+    </action>
+    <action id="GenerateGetterCheckerMethods" text="Getter and Checker" class="com.qaprosoft.carinaplugin.actions.codeInsight.CheckerAction">
+      <add-to-group group-id="JavaGenerateGroup1" relative-to-action="GenerateGetterAndSetter" anchor="after" />
+    </action>
+    <action id="GenerateGetterSelectorMethods" text="Getter and Selector" class="com.qaprosoft.carinaplugin.actions.codeInsight.SelectorAction">
+      <add-to-group group-id="JavaGenerateGroup1" relative-to-action="GenerateGetterAndSetter" anchor="after" />
+    </action>
+  </actions>
+
+</idea-plugin>
